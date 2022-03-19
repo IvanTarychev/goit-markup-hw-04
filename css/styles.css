@@ -1,6 +1,7 @@
 :root {
   --section-color: #f5f4fa;
   --hover-color: #2196f3;
+  --btn-hover-color: #188ce8;
   --main-color: #212121;
   --text-color: #757575;
   --white-color: #ffffff;
@@ -23,8 +24,8 @@ body {
 }
 
 *,
-*::before,
-*::after {
+::before,
+::after {
   box-sizing: inherit;
 }
 
@@ -72,15 +73,21 @@ ul {
 }
 
 .vector {
+  display: flex;
+  width: 100%;
+  height: 120px;
   background-color: var(--section-color);
   border-radius: 4px;
-  padding: auto 25px;
-  text-align: center;
+
+  justify-content: center;
+  align-items: center;
+
   margin-bottom: 30px;
 }
 
 .vector-icon {
   width: 70px;
+  height: 70px;
 }
 
 /* CUSTOMERS */
@@ -171,9 +178,10 @@ ul {
 }
 
 .pagination {
-  display: inline-block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
+  align-items: center;
 
   color: var(--main-color);
   font-size: 14px;
@@ -246,7 +254,9 @@ ul {
 
 .team .content {
   padding-top: 30px;
+  padding-right: 32px;
   padding-bottom: 30px;
+  padding-left: 32px;
 }
 
 .team .header {
@@ -382,6 +392,7 @@ ul {
 
 .btn:hover,
 .btn:focus {
+  color: var(--btn-hover-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -430,7 +441,7 @@ ul {
   margin-left: auto;
 
   font-size: 44px;
-  line-height: 1, 36;
+  line-height: 1.36;
 }
 
 .hdr {
@@ -489,8 +500,9 @@ ul {
   line-height: 1.6;
 }
 
-.portfolio-list .item:hover,
-.portfolio-list .item:focus {
+.card:hover,
+.card:focus {
+  display: inline-block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -515,6 +527,7 @@ ul {
 
 .hero {
   max-width: 1600px;
+  margin: 0 auto;
   background-color: var(--background-color);
   padding-top: 200px;
   padding-bottom: 200px;
@@ -550,7 +563,9 @@ ul {
 
 .portfolio-list .content {
   padding: 20px 24px;
-  border: solid 1px var(--border-color);
+  border-right: solid 1px var(--border-color);
+  border-bottom: solid 1px var(--border-color);
+  border-left: solid 1px var(--border-color);
 }
 
 .foot-menu {
@@ -564,9 +579,9 @@ ul {
 
 .footer-box {
   display: flex;
+  align-items: baseline;
 }
 
 .social-box {
-  padding-top: 16px;
   margin-left: 70px;
 }
